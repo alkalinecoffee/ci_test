@@ -1,0 +1,9 @@
+export GEM_HOME='./gems'
+export GEM_PATH=$GEM_HOME
+export RUBY='java -jar jruby-complete-1.7.19.jar'
+export RAILS_ENV='test'
+export RACK_ENV=$RAILS_ENV
+export PATH=$PATH:$GEM_HOME/bin
+$RUBY -S gem install bundler --version 1.7.11 && \
+$RUBY -S bundle install && \
+$RUBY -S rake --trace test
